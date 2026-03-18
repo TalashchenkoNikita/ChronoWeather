@@ -7,7 +7,14 @@ const input = document.querySelector("#datetime-picker");
 const result = document.querySelector(".result");
 const body = document.querySelector("body");
 
-flatpickr(input);
+flatpickr(input, {
+  altInput: true,
+  altFormat: "F j, Y",
+  dateFormat: "Y-m-d",
+  onReady: (_, __, instance) => {
+    instance.altInput.placeholder = "Select date";
+  }
+});
 
 export function createResultCard(
   { tmin, tmax, wspd },
