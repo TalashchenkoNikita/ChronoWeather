@@ -58,6 +58,7 @@ body {
 
 
 input {
+    min-height: 44px;
     border: 1px solid #808080;;
     border-radius: 4px;
     width: 100%;
