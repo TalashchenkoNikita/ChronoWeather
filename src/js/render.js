@@ -9,8 +9,11 @@ const body = document.querySelector("body");
 
 flatpickr(input, {
   altInput: true,
-  altFormat: "F j, Y",
+  altInputClass: "input",
   dateFormat: "Y-m-d",
+  altFormat: "F j, Y",
+  allowInput: true,
+  defaultDate: null,
   onReady: (_, __, instance) => {
     instance.altInput.placeholder = "Select date";
   }
