@@ -57,7 +57,7 @@ body {
 }
 
 
-input {
+.form input {
     min-height: 44px;
     border: 1px solid #808080;;
     border-radius: 4px;
@@ -72,6 +72,20 @@ input {
     line-height: 1.5;
     box-sizing: border-box;
     appearance: none;
+}
+
+.flatpickr-calendar {
+  background: rgba(255,255,255,0.79);
+  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.12);
+}
+
+.flatpickr-months .flatpickr-month,
+.flatpickr-current-month {
+  color: #323349;
+  fill: #323349;
 }
 
 
