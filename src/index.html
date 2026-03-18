@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/img/logo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JS-HW-11</title>
-    <link rel="stylesheet" href="./css/styles.css" />
+    <title>ChronoWeather</title>
+    <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div class="bg-overlay"></div>
     <main>
       <div class="container">
         <span class="loader" style="display: none"></span>
@@ -16,15 +17,24 @@
             <input
               type="text"
               name="search-text"
-              placeholder="Search images..."
+              placeholder="Search your city..."
+              required
+            />
+          </label>
+          <label>
+            <input
+              id="datetime-picker"
+              name="datetime-picker"
+              placeholder="Select a date..."
               required
             />
           </label>
           <button type="submit">Search</button>
         </form>
-        <ul class="gallery"></ul>
+        <div class="result"></div>
       </div>
     </main>
     <script type="module" src="./main.js"></script>
   </body>
 </html>
+
