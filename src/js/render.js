@@ -11,7 +11,7 @@ const fp = flatpickr(inputFp, {
   altInput: true,
   altFormat: 'F j, Y',
   dateFormat: 'Y-m-d',
-  allowInput: true,
+  allowInput: false,
   disableMobile: true, // ← вимикає нативний мобільний пікер
 
   onReady(_, __, instance) {
