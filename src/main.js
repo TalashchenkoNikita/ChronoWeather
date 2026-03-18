@@ -38,7 +38,7 @@ form.addEventListener("submit", async (e) => {
         render.createResultCard(dayInfo.data[0], date, request, countryCode);
       } else {
         iziToast.show({
-          message: "No data for this date, try another one",
+          message:  "Data not found for this date. Try another.",
           color: "red",
           position: "topRight",
         });

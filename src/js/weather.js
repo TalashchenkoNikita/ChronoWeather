@@ -13,7 +13,6 @@ export async function getCityByCoordinates(lat, lon) {
     };
 
     const response = await axios.request(config);
-    console.log(response.data);
     return response.data;
   } catch (error) {
     console.error("Ошибка запроса:", error);
