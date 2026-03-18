@@ -60,6 +60,7 @@ body {
 input {
     border: 1px solid #808080;;
     border-radius: 4px;
+    width: 100%;
     padding: 8px 36px 8px 36px;
     background-color: rgba(240, 248, 255, 0.806); 
     outline: none;
@@ -70,7 +71,6 @@ input {
     line-height: 1.5;
     box-sizing: border-box;
     appearance: none;
-    flex: 1;
 }
 
 
@@ -111,6 +111,8 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 270px;
+  width: 100%;
 }
 
 .result {

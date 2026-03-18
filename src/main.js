@@ -6,10 +6,12 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 
 const form = document.querySelector(".form");
+const submitBtn = document.querySelector(".submitBtn");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
   render.clearResult();
+  submitBtn.disabled = true;
   const data = new FormData(form);
   const request = data.get("search-text").trim();
   const date = data.get("datetime-picker").split(" ")[0];
@@ -57,5 +59,6 @@ form.addEventListener("submit", async (e) => {
     console.error("Ошибка:", err);
   } finally {
     form.reset();
+    submitBtn.disabled = false;
   }
 });
