@@ -56,11 +56,6 @@ body {
   url("./img/winter.jpg");
 }
 
-.form input,
-.form .flatpickr-input {
-  width: 100%;
-  box-sizing: border-box;
-}
 
 input {
     border: 1px solid #808080;;
@@ -75,6 +70,7 @@ input {
     line-height: 1.5;
     box-sizing: border-box;
     appearance: none;
+    flex: 1;
 }
 
 
@@ -115,7 +111,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  align-items: center;
 }
 
 .result {
