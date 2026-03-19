@@ -6,6 +6,7 @@ import 'flatpickr/dist/flatpickr.min.css';
 const result = document.querySelector('.result');
 const body = document.querySelector('body');
 const inputFp = document.querySelector('#datetime-picker');
+const loader = document.querySelector('.loader');
 
 const fp = flatpickr(inputFp, {
   altInput: true,
@@ -26,8 +27,9 @@ export function createResultCard(
   request,
   countryCode
 ) {
+  showLoader();
   changeBackground(date);
-  const markup = `<p class="city-title">
+  let markup = `<p class="city-title">
         City: ${capitalize(request)} 
         <img 
             src="https://flagcdn.com/w40/${countryCode.toLowerCase()}.png" 
@@ -38,8 +40,10 @@ export function createResultCard(
     </p>
     <p class="date">Date: ${date}</p>
     <p class="max-temp">Max temperature: ${tmax} °C</p>
-    <p class="msn-temp">Minimal temperature: ${tmin} °C</p>
-    <p class="windspeed">Average windspeed: ${wspd} m/s</p>`;
+    <p class="msn-temp">Minimal temperature: ${tmin} °C</p>`;
+    if(wspd) {
+      markup += `<p class="windspeed">Average windspeed: ${wspd} m/s</p>`
+    }
   result.style.visibility = 'visible';
   result.insertAdjacentHTML('beforeend', markup);
 }
@@ -87,4 +91,12 @@ function changeBackground(date) {
     default:
       return 'Некорректный месяц';
   }
+}
+
+export function showLoader() {
+    loader.classList.remove('hidden');
+}
+
+export function hideLoader() {
+    loader.classList.add('hidden');
 }

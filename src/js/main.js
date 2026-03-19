@@ -1,6 +1,6 @@
-import * as finder from "./js/find-city.js";
-import * as weather from "./js/weather.js";
-import * as render from "./js/render.js";
+import * as finder from "./find-city.js";
+import * as weather from "./weather.js";
+import * as render from "./render.js";
 import iziToast from "izitoast";
 // Додатковий імпорт стилів
 import "izitoast/dist/css/iziToast.min.css";
@@ -15,6 +15,7 @@ const submitBtn = document.querySelector(".submitBtn");
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
+  render.showLoader();
   render.clearResult();
   submitBtn.disabled = true;
   const data = new FormData(form);
@@ -65,5 +66,6 @@ form.addEventListener("submit", async (e) => {
   } finally {
     form.reset();
     submitBtn.disabled = false;
+    render.hideLoader();
   }
 });
