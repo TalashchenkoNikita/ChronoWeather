@@ -55,9 +55,9 @@ export function clearResult() {
 
 function capitalize(str) {
   return str
-    .split(" ")
-    .map(word => word[0].toUpperCase() + word.slice(1))
-    .join(" ");
+    .split(' ')
+    .map(word => word ? word[0].toUpperCase() + word.slice(1) : '')
+    .join(' ');
 }
 
 function changeBackground(date) {
