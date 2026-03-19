@@ -54,15 +54,10 @@ export function clearResult() {
 }
 
 function capitalize(str) {
-  return str[0].toUpperCase() + str.slice(1);
-}
-
-function getFlagEmoji(countryCode) {
-  return countryCode
-    .toUpperCase()
-    .split('')
-    .map(char => String.fromCodePoint(127397 + char.charCodeAt()))
-    .join('');
+  return str
+    .split(" ")
+    .map(word => word[0].toUpperCase() + word.slice(1))
+    .join(" ");
 }
 
 function changeBackground(date) {
