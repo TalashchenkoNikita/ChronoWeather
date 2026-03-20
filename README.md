@@ -15,3 +15,6 @@
 - API для отримання даних про погоду 
 - Flatpickr для вибору дати
 
+
+<img width="414" height="786" alt="image" src="https://github.com/user-attachments/assets/062e8139-59b8-4026-a7b0-016489a77437" />
+
